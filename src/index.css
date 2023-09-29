@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    min-height: 100svh;
     padding: 4rem;
     color: #495057;
     display: flex;
@@ -27,10 +27,10 @@ body {
 }
 
 .app {
-    min-height: 66vh;
+    min-height: 66svh;
     display: grid;
     grid-template-columns: 36rem 44rem;
-    column-gap: 4rem;
+    gap: 4rem;
     align-items: start;
 }
 
@@ -168,4 +168,18 @@ form h2 {
     text-transform: uppercase;
     letter-spacing: -0.5px;
     margin-bottom: 1.6rem;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        padding: 2rem;
+    }
+
+    .app {
+        grid-template-columns: 1fr;
+    }
+
+    .form-add-friend {
+        grid-template-columns: 1fr 50%;
+    }
 }
