@@ -78,6 +78,7 @@ export default function App() {
                 <SplitBill
                     name={data.filter((obj) => obj.id === selectedId)[0]?.name}
                     closeSplitBill={closeSplitBill}
+                    key={selectedId}
                 />
             )}
         </section>
